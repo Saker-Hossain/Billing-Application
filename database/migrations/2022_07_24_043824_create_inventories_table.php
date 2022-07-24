@@ -18,10 +18,10 @@ class CreateInventoriesTable extends Migration
             $table->date('date');
             $table->integer('bill_no')->unique();
             $table->foreignId('customer_id')->references('id')->on('customers');
-            $table->integer('total_discount');
-            $table->integer('total_bill_amount');
-            $table->integer('due_amount');
-            $table->integer('paid_amount');
+            $table->string('total_discount');
+            $table->string('total_bill_amount');
+            $table->string('due_amount');
+            $table->string('paid_amount');
             $table->timestamps();
         });
     }

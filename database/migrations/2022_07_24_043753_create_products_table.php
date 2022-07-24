@@ -17,7 +17,7 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->string('code')->unique();
             $table->string('name');
-            $table->integer('rate');
+            $table->string('rate');
             $table->timestamps();
         });
     }
