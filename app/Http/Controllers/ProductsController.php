@@ -20,6 +20,7 @@ class ProductsController extends Controller
             "message" => "Product List",
             "data" => $products,
         ]);
+        // return view('billing.billing', compact('products'));
 
     }
 

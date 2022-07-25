@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Bill;
 
 use App\Http\Controllers\Controller;
+use App\Models\Customer;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -16,6 +17,8 @@ class BillingController extends Controller
 
     public function index()
     {
-        return view('billing.billing');
+        $products = Product::all();
+        $customers = Customer::all();
+        return view('billing.billing', compact('products', 'customers'));
     }
 }

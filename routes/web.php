@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Bill\BillingController;
+use App\Http\Controllers\InventoriesController;
 use App\Http\Controllers\InventoryProducts;
 use Illuminate\Support\Facades\Route;
 
@@ -20,6 +21,7 @@ Route::get('/', function () {
 });
 Route::get('/billing', [BillingController::class, 'index']);
 Route::resource('/inventoryProducts', InventoryProducts::class);
+Route::resource('/inventories', InventoriesController::class);
 
 
 

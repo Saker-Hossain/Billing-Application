@@ -23,11 +23,12 @@
         <th>Total Bill</th>
         <th width="280px">Action</th>
     </tr>
-    @foreach ($inventoryProducts as $inv_prod)
+@dd($inventories)
+    @foreach ($inventories as $inv)
     <tr>
         <td>{{ ++$i }}</td>
-        <td>{{ $inv_prod->name }}</td>
-        <td>{{ $inv_prod->name }}</td>
+        <td>{{ $inv->customer_id }}</td>
+        <td>{{ $inv->total_bill_amount }}</td>
         <td>
             <form action="{{ route('products.destroy',$inv_prod->id) }}" method="POST">
 
